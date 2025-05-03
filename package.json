@@ -5,12 +5,13 @@
       "description": "MCP Server for Zendesk API",
       "main": "src/index.js",
       "bin": {
-        "zendesk-mcp": "src/index.js"
-      },
+        "zendesk-mcp": "src/stdio.js"
+      },      
       "scripts": {
-        "start": "node src/index.js",
-        "dev": "node --watch src/index.js",
-        "inspect": "npx -y @modelcontextprotocol/inspector node src/index.js"
+        "start": "bun src/stdio.js",
+        "dev": "bun --watch src/stdio.js",
+        "build": "bun build src/index.js --outfile dist/index.js",
+        "inspect": "bunx -y @modelcontextprotocol/inspector node src/stdio.js"
       },
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.0.0",
