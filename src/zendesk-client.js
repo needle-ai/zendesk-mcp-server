@@ -31,8 +31,8 @@ export class ZendeskClient {
         method,
         url,
         headers,
-        data,
-        params
+        data: data ?? undefined,
+        params: params ?? undefined
       });
 
       return response.data;
